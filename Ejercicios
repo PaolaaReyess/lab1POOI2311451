@@ -1,0 +1,135 @@
+//ejercicio1//
+public class Main {
+    public static void main(String[] args) {
+        int x = 144;
+        int y = 999;
+        
+        int suma = x + y;
+        int resta = x - y;
+        int division = x / y;
+        int multiplicacion = x * y;
+
+        System.out.println("El valor de x es: " + x);
+        System.out.println("El valor de y es: " + y);
+        System.out.println("La suma de x e y es: " + suma);
+        System.out.println("La resta de x e y es: " + resta);
+        System.out.println("La división de x entre y es: " + division);
+        System.out.println("La multiplicación de x e y es: " + multiplicacion);
+    }
+}
+
+//ejercicio2//
+public class Main {
+    public static void main(String[] args) {
+      
+        String nombre = "John Doe";
+        String direccion = "123 Calle Principal";
+        String telefono = "555-123-4567";
+        
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Dirección: " + direccion);
+        System.out.println("Teléfono: " + telefono);
+    }
+}
+
+//ejercicio3//
+public class Main {
+    public static void main(String[] args) {
+        double euros = 100.0; 
+        double pesetas = euros * 166.386; 
+        System.out.println(euros + " euros equivalen a " + pesetas + " pesetas.");
+    }
+}
+
+//ejercicio4//
+public class Main {
+    public static void main(String[] args) {
+        double soles = 200.0; 
+        double tasaCambio = 4.0; 
+        double euros = soles / tasaCambio;
+        System.out.println(soles + " soles equivalen a " + euros + " euros.");
+    }
+}
+
+//ejercicio5//
+public class Main {
+    public static void main(String[] args) {
+        int horasTrabajadas = 40; 
+        double tarifaHora = 12.0; /
+        double salarioSemanal = horasTrabajadas * tarifaHora;
+        System.out.println("El salario semanal del empleado es: " + salarioSemanal + " euros.");
+    }
+}
+
+//ejercicio6//
+public class Main {
+    public static void main(String[] args) {
+        double megabytes = 10.0; 
+        double kilobytes = megabytes * 1024;
+        System.out.println(megabytes + " megabytes equivalen a " + kilobytes + " kilobytes.");
+    }
+}
+
+//ejercicio8//
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingresa la hora (solo la hora, sin minutos): ");
+        int hora = scanner.nextInt();
+        
+        if (hora >= 6 && hora <= 12) {
+            System.out.println("Buenos días");
+        } else if (hora >= 13 && hora <= 20) {
+            System.out.println("Buenas tardes");
+        } else {
+            System.out.println("Buenas noches");
+        }
+        
+        scanner.close();
+    }
+}
+
+//ejercicio9//
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingresa el número de horas trabajadas: ");
+        int horasTrabajadas = scanner.nextInt();
+        
+        double tarifaHoraNormal = 12.0;
+        double tarifaHoraExtra = 16.0;
+        int horasNormales = Math.min(horasTrabajadas, 40);
+        int horasExtras = Math.max(horasTrabajadas - 40, 0);
+        
+        double salarioSemanal = (horasNormales * tarifaHoraNormal) + (horasExtras * tarifaHoraExtra);
+        
+        System.out.println("El salario semanal del trabajador es: " + salarioSemanal + " soles.");
+        
+        scanner.close();
+    }
+}
+
+//ejercicio10//
+import java.util.Scanner;
+
+public class CalculoTiempoDeCaida {
+    public static void main(String[] args) {
+ 
+        final double g = 9.81;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresa la altura (en metros) desde la que cae el objeto: ");
+        double altura = scanner.nextDouble();
+        scanner.close();
+
+        double tiempo = Math.sqrt((2 * altura) / g);
+
+        System.out.println("El tiempo que tardará en caer el objeto desde una altura de " + altura + " metros es de " + tiempo + " segundos.");
+    }
+}
